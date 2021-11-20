@@ -3,7 +3,16 @@ const User = require("../models/User.model");
 const bcrypt = require("bcryptjs");
 
 router.post("/signup", (req, res, next) => {
-  const { username, password } = req.body;
+  const {
+    username,
+    password,
+    email,
+    name,
+    lastName,
+    city,
+    country,
+    typeOfDiet,
+  } = req.body;
 
   //verification
   if (!username || password.length < 7) {
