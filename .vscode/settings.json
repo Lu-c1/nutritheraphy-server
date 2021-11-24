@@ -18,5 +18,6 @@
     "titleBar.inactiveBackground": "#c4dca999",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#C4DCA9"
+  "peacock.color": "#C4DCA9",
+  "cSpell.words": ["middlewares"]
 }

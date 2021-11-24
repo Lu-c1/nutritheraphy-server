@@ -6,6 +6,7 @@ router.post("/signup", (req, res, next) => {
   const {
     username,
     password,
+    image,
     email,
     name,
     lastName,
@@ -38,6 +39,7 @@ router.post("/signup", (req, res, next) => {
         return User.create({
           username,
           password: hashedPassword,
+          image,
           email,
           name,
           lastName,

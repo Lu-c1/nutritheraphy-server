@@ -3,6 +3,7 @@ const Recipe = require("../models/Recipe.model");
 
 router.post("/create", (req, res, next) => {
   const {
+    createdBy,
     title,
     image,
     portions,
@@ -41,10 +42,19 @@ router.get("/:id", (req, res, next) => {
     .catch((err) => next(err));
 });
 router.patch("/:id", (req, res, next) => {
+  const {
+    title,
+    image,
+    portions,
+    howToCookIt,
+    kcal,
+    carbohydrates,
+    proteins,
+    fats,
+  } = req.body;
   Recipe.findByIdAndUpdate(
     req.params.id,
     {
-      createdBy,
       title,
       image,
       portions,
