@@ -3,7 +3,7 @@ const User = require("../models/User.model");
 
 router.get("/list", (req, res, next) => {
   User.find({}, { username: 1 })
-    .then((data) => res.json(data))
+    .then((data) => res.status(200).json(data))
     .catch((err) => next(err));
 });
 
