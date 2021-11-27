@@ -74,4 +74,5 @@ router.delete("/:id", (req, res, next) => {
     .then((data) => res.json("ok" + data._id))
     .catch((err) => next(err));
 });
+
 module.exports = router;
